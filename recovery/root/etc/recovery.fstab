@@ -1,0 +1,14 @@
+/system        ext4        /dev/block/rknand_system      							flags=backup=1;display=System
+/data          ext4        /dev/block/rknand_userdata    							flags=backup=1
+/cache         ext4        /dev/block/rknand_cache       							flags=backup=1;display=Cache
+/metadata      ext4        /dev/block/rknand_metadata    							flags=backup=1;display=Metadata
+
+/uboot         emmc        /uboot       											flags=backup=1;display=Uboot;flashimg
+/misc          emmc        /misc
+/resource      emmc        /resource    											flags=backup=1;display=Resource;flashimg
+/boot          emmc        /boot        											flags=backup=1;display=Boot
+/recovery      emmc        /recovery    											flags=backup=1;display=Recovery
+
+/sdcard		   vfat		   /dev/block/rknand_user 		  							flags=backup=1;display=SDCard
+/external_sd   vfat        /dev/block/mmcblk0p1                                     flags=wipeingui;storage;removable;display="External SD"
+/usb-otg       auto        /dev/block/sda1                                          flags=wipeingui;storage;removable;display="USB OTG"
